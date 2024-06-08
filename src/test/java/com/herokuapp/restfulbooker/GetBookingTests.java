@@ -6,12 +6,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class GetBookingTests {
+public class GetBookingTests extends BaseTest {
 
     @Test
     public void getBookingTest() {
         // Get response with booking
-        Response response = RestAssured.get("https://restful-booker.herokuapp.com/booking/5");
+        Response response = RestAssured.given(spec).get("https://restful-booker.herokuapp.com/booking/5");
         response.print();
 
         // Verify response 200
