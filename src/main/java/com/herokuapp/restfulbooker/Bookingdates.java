@@ -9,8 +9,7 @@ public class Bookingdates {
         this.checkout = checkout;
     }
 
-    public String getCheckin() {
-        return checkin;
+    public Bookingdates() {
     }
 
     @Override
@@ -19,6 +18,10 @@ public class Bookingdates {
                 "checkin='" + checkin + '\'' +
                 ", checkout='" + checkout + '\'' +
                 '}';
+    }
+
+    public String getCheckin() {
+        return checkin;
     }
 
     public void setCheckin(String checkin) {
